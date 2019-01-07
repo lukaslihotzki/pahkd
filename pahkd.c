@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <xcb/xcb.h>
+#include <xcb/xcb_event.h>
 #include <pulse/pulseaudio.h>
-
-#define XCB_EVENT_RESPONSE_TYPE_MASK (0x7f)
-#define XCB_EVENT_RESPONSE_TYPE(e) (e->response_type & XCB_EVENT_RESPONSE_TYPE_MASK)
-#define XCB_EVENT_SENT(e) (e->response_type & ~XCB_EVENT_RESPONSE_TYPE_MASK)
 
 enum {
 	KEYCODE_MUTE = 121,
